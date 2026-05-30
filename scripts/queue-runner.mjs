@@ -49,6 +49,11 @@ function getNextRun(schedule) {
   const now  = new Date();
   const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
 
+  if (schedule.type === 'interval') {
+    const hours = schedule.hours || 6;
+    return new Date(now.getTime() + hours * 3600 * 1000).toISOString();
+  }
+
   if (schedule.type === 'weekly') {
     const targetDay = days.indexOf(schedule.day.toLowerCase());
     const [h, m]    = schedule.time.split(':').map(Number);

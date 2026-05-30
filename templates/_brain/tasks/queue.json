@@ -2,6 +2,20 @@
   "version": "1.0",
   "tasks": [
     {
+      "id": "proactive-check",
+      "name": "Proactive Opportunity Check",
+      "description": "Runs every 6 hours — reads brain state, surfaces opportunities and risks, writes suggestions to inbox",
+      "prompt": "Run a proactive check: (1) Read _brain/index.html and any brain sections updated recently. (2) Look for: metrics anomalies or trends worth acting on, customers at risk or near quota, stalled or blocked projects, tools referenced in the project but not connected via MCP, recurring patterns that should become a skill. (3) Write a brief suggestions file to _brain/inbox/proactive-{YYYY-MM-DD-HH}.md — top 2-3 opportunities or actions, any risks. Keep it short: 3-5 bullet points max. (4) Auto-commit: git add _brain/ && git commit -m 'brain: proactive check'.",
+      "schedule": {
+        "type": "interval",
+        "hours": 6
+      },
+      "last_run": null,
+      "next_run": null,
+      "status": "pending",
+      "enabled": false
+    },
+    {
       "id": "daily-brain-sync",
       "name": "Daily Brain Sync",
       "description": "Incremental project scan via git diff — updates brain with what changed today",

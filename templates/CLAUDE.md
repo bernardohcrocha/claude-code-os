@@ -74,12 +74,12 @@ Example format:
 2. ..."*
 
 ### Step 6 — Scheduler Setup
-Ask: *"Want me to set up the weekly brain review? I'll run every Monday at 9am, analyze your metrics and customers, and have a report ready when you open Claude Code."*
+Ask: *"Want me to activate the automated tasks? I'll set up: (1) a proactive check every 6 hours — looks for opportunities, risks, and things to act on, and leaves you a note; (2) a daily brain sync that tracks everything that changes in the project; (3) a weekly review every Monday at 9am with a full business summary."*
 
 If yes:
-1. Update `_brain/tasks/queue.json`: set `enabled: true` and calculate `next_run`
+1. Update `_brain/tasks/queue.json`: set `enabled: true` on all three tasks, calculate `next_run` for each
 2. Run: `bash _brain/scripts/setup-scheduler.sh`
-3. Confirm: *"Done. First review runs [date]."*
+3. Confirm: *"Done. Proactive check starts now. First weekly review: [next Monday date]."*
 
 ---
 
@@ -125,17 +125,19 @@ Run this automatically. Do not ask permission. Do not skip it.
 
 Do not wait for the user to ask.
 
-**After completing the session protocol, always surface 1–2 next-best actions** — based on current brain state, even if nothing looks wrong. Look for: metrics trends worth acting on, customers at risk, stalled projects, skill gaps, or automation opportunities. Lead with the observation, follow with the suggested action:
+**The proactive check runs automatically every 6 hours** via the queue runner — it reads the brain, looks for opportunities and risks, and writes a brief note to `_brain/inbox/`. The next time you open Claude Code, the session protocol reads it and surfaces the suggestions.
 
-*"Based on what I see: [observation] — want me to [concrete action]?"*
+If a proactive check note is in the inbox, lead with it:
 
-Every session, proactively check:
+*"Since you were last here: [observation] — want me to [concrete action]?"*
+
+The proactive check looks for:
 - Metrics: any trend, anomaly, or threshold worth flagging?
 - Customers: anyone at churn risk, near quota, or inactive after signup?
 - Projects: anything stalled, blocked, or overdue?
 - Tools: any service referenced in the project that isn't connected via MCP yet? Offer to find and install it.
-- Skills: any recurring pattern from this session that should become a permanent skill?
-- Tasks: anything that just happened manually that should be automated going forward?
+- Skills: any recurring pattern that should become a permanent rule?
+- Automation: anything done manually that should be scheduled going forward?
 
 When completing any task, always ask yourself: *"Should this run automatically? Should I create a skill so it never needs explaining again?"*
 
