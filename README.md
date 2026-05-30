@@ -87,7 +87,7 @@ These become **permanent skills**: created automatically, updated on the fly, ap
 |---|---|
 | **Your existing tools, already connected** | Reads your codebase, docs, and `.env` files. Your Stripe key is already there. Your product logic is in the code. Zero extra setup. |
 | **Self-improving skills** | Every instruction becomes a permanent rule. Created and updated on the fly, applied forever. One correction, done. |
-| **Live business metrics** | Connects to Stripe, Supabase, or any database already in your project. Builds a live dashboard. Auto-updates daily. |
+| **Live business metrics** | Connects to Stripe, Supabase, or any database already in your project. Builds a live dashboard — updated whenever your data changes or a scheduled task runs. |
 | **Proactive setup** | Reads your entire project, detects your stack, and suggests use cases specific to your business. Doesn't wait to be asked. |
 | **Process documentation** | No SOPs yet? It interviews you and writes them. Then keeps them updated as things change. |
 | **Plain language operations** | Send emails, query databases, generate reports, schedule tasks. No code required. |
