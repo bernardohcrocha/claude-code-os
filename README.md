@@ -1,41 +1,47 @@
-![Claude Code OS](header.svg)
+<div align="center">
 
-**Self-improving · No new tools · No server · No lock-in**
+![Claude Code OS](claude-code-os.png)
 
----
+# Claude Code OS
 
-You already have a codebase, `.env` files with your API keys, scattered docs, brand assets, price tables. You just haven't had time to connect all of it into something useful.
+**Operational Co-Pilot for Solo Founders**
 
-**Claude Code OS reads everything you already have** — documents, code, configs, entire project folders — understands your business from the ground up, and turns Claude Code into your dedicated operational co-pilot. No reconnecting tools. No re-explaining context. No new infrastructure to maintain.
+Self-improving · No new tools · No server · No lock-in
 
-Pair it with a speech-to-text tool like [handy.computer](https://handy.computer) or WhisperFlow and you have your own dedicated virtual employee — assign tasks, ask anything, have it running your company based on everything you've already built.
+[![MIT License](https://img.shields.io/badge/License-MIT-da7756?style=flat-square)](LICENSE)
+[![Built for Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-da7756?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
 
----
-
-## What it does
-
-| | |
-|---|---|
-| **Uses everything you already have** | Reads your codebase, docs, and `.env` files. Your Stripe key is already there — no need to reconnect. Your product logic is in the code — no need to re-explain. Minimum effort to get started. |
-| **Self-improving skills** | Every instruction becomes a permanent rule, applied forever — *"always sign emails as Lucas"*, *"flag accounting firms for LGPD"*. One instruction, done. Never repeat yourself. |
-| **Proactive setup** | Reads your entire project, detects your tools, and **suggests use cases for your specific business** — you don't have to figure out what to ask for. |
-| **Process documentation** | No SOPs written yet? It interviews you and **writes the documentation for you** — then keeps it updated automatically as things evolve. |
-| **Live business metrics** | Connects to Stripe, Supabase, or any database already in your project. Revenue, customers, and usage **auto-update daily** — no manual exports, no dashboards to maintain. |
-| **Operational orders** | Send emails, query databases, generate reports, schedule recurring tasks — all in **plain language**, no code required. |
+</div>
 
 ---
 
-## What you can do
+## Why Claude Code OS?
+
+Other agent tools are powerful but passive — you figure out the use cases, connect the tools, write the prompts. Claude Code OS reads your existing project, understands your business, and **proactively suggests what it can do for you**. Every instruction you give is saved as a **self-improving skill**, applied automatically in every future session. It gets smarter the more you use it — with zero new infrastructure, zero new tools, and zero re-explaining.
+
+---
+
+## Quick Start
+
+Open Claude Code in your project and paste:
+
+```
+Help me implement Claude Code OS: https://github.com/bernardohcrocha/claude-code-os
+```
+
+The agent fetches the framework and starts the setup interview automatically — reading what you already have, asking only what's missing.
+
+---
+
+## Example Use Cases
 
 **Ask anything about your business**
 > *"How's my MRR this month vs last?"*  
 > *"Which accounts are at risk right now?"*  
-> *"Who signed up today — any look like fraud?"*  
-> *"What are customers requesting most?"*
+> *"Who signed up today — any look like fraud?"*
 
 **Give operational orders**
 > *"Follow up with users who haven't made a second query in 7 days"*  
-> *"Send a welcome email to the companies that signed up today"*  
 > *"Every Monday, send me a report of new signups and at-risk accounts"*
 
 **Teach it your way of working**
@@ -46,15 +52,16 @@ These become **permanent skills** — applied automatically in every future sess
 
 ---
 
-## Install
+## What it does
 
-Open Claude Code in your project and paste:
-
-```
-Help me implement Claude Code OS: https://github.com/bernardohcrocha/claude-code-os
-```
-
-The agent fetches the framework and **starts the setup interview automatically** — reading what you already have, asking only what's missing.
+| | |
+|---|---|
+| **Uses everything you already have** | Reads your codebase, docs, and `.env` files. Your Stripe key is already there — no reconnecting. Your product logic is in the code — no re-explaining. Minimum effort to get started. |
+| **Self-improving skills** | Every instruction becomes a permanent rule, applied forever. One correction, done. Never repeat yourself. |
+| **Proactive setup** | Reads your entire project, detects your tools, and **suggests use cases for your specific business** — you don't have to figure out what to ask for. |
+| **Process documentation** | No SOPs written yet? It interviews you and **writes the documentation for you** — then keeps it updated automatically. |
+| **Live business metrics** | Connects to Stripe, Supabase, or any database already in your project. Revenue, customers, and usage **auto-update daily**. |
+| **Operational orders** | Send emails, query databases, generate reports, schedule recurring tasks — all in **plain language**, no code. |
 
 ---
 
@@ -62,20 +69,14 @@ The agent fetches the framework and **starts the setup interview automatically**
 
 Just drop what you have. The agent reads everything, asks only what's missing, and guides you through the rest.
 
-- **Drop your documents and files** into `_brain/inbox/` — SOPs, brand guides, price tables, contracts, code, configs. Or point it at existing folders. Reads everything, extracts what matters, archives the originals. Large codebases processed in stages.
+- **Drop your documents and files** into `_brain/inbox/` — SOPs, brand guides, price tables, contracts, code, configs. Reads everything, extracts what matters, archives the originals. Large codebases processed in stages.
 - **Zero-friction connections** — your `.env` already has Stripe, Supabase, and other keys. Used directly, no reconnecting.
-- **Asks only what's missing** — *"Your price table has no rate limits — what are they?"* One question at a time.
+- **Asks only what's missing** — one question at a time, in plain language.
 - **Suggests use cases** — based on what it found in your actual project, not generic templates.
 - **Writes missing documentation** — *"I didn't find any SOPs — want me to document your onboarding process?"*
 - **Builds a live dashboard** — your north star metrics, auto-refreshing in the browser.
 
 After that, **the brain runs itself.**
-
----
-
-## For small teams
-
-Commit `_brain/` to your git repository. Every team member works from the same source of truth. Company knowledge, **version-controlled**.
 
 ---
 
