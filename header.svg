@@ -1,0 +1,33 @@
+<svg width="1200" height="240" viewBox="0 0 1200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="240" fill="#0d1117"/>
+  <!-- Top accent line -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="#da7756" stroke-width="2" opacity="0.4"/>
+  <!-- Bottom accent line -->
+  <line x1="0" y1="239" x2="1200" y2="239" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Main wordmark -->
+  <text
+    x="600"
+    y="148"
+    font-family="'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Courier New', monospace"
+    font-size="82"
+    font-weight="700"
+    text-anchor="middle"
+    letter-spacing="4"
+  >
+    <tspan fill="#da7756">CLAUDE CODE</tspan><tspan fill="#6e7681" font-size="74"> OS</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text
+    x="600"
+    y="196"
+    font-family="'SF Mono', 'Fira Code', 'Consolas', 'Courier New', monospace"
+    font-size="14"
+    font-weight="400"
+    text-anchor="middle"
+    letter-spacing="4"
+    fill="#484f58"
+  >OPERATIONAL AND KNOWLEDGE CO-PILOT FOR SOLO FOUNDERS</text>
+</svg>

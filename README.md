@@ -1,21 +1,6 @@
-```
- ██████╗██╗      █████╗ ██╗   ██╗██████╗ ███████╗
-██╔════╝██║     ██╔══██╗██║   ██║██╔══██╗██╔════╝
-██║     ██║     ███████║██║   ██║██║  ██║█████╗
-██║     ██║     ██╔══██║██║   ██║██║  ██║██╔══╝
-╚██████╗███████╗██║  ██║╚██████╔╝██████╔╝███████╗
- ╚═════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝
+![Claude Code OS](header.svg)
 
- ██████╗  ██████╗ ██████╗ ███████╗     ██████╗ ███████╗
-██╔════╝ ██╔═══██╗██╔══██╗██╔════╝    ██╔═══██╗██╔════╝
-██║      ██║   ██║██║  ██║█████╗      ██║   ██║███████╗
-██║      ██║   ██║██║  ██║██╔══╝      ██║   ██║╚════██║
-╚██████╗ ╚██████╔╝██████╔╝███████╗    ╚██████╔╝███████║
- ╚═════╝  ╚═════╝ ╚═════╝ ╚══════╝     ╚═════╝ ╚══════╝
-```
-
-### The Operational and Knowledge Co-Pilot for Solo Founders.
-**Self-improving · Uses everything you already have · No server · No lock-in**
+**Self-improving · No new tools · No server · No lock-in**
 
 ---
 
@@ -73,11 +58,13 @@ The agent fetches the framework and **starts the setup interview automatically**
 
 ---
 
-## Setup — once, 10–20 minutes
+## Setup — low effort. It guides you.
 
-- **Point it at what you have** — drop documents, code, configs, brand assets into `_brain/inbox/`, or point it at existing folders. It reads everything, extracts what matters, archives the originals. Large codebases are processed in stages — architecture first, critical modules next, depth on demand.
-- **Zero-friction connections** — your `.env` already has Stripe, Supabase, and other keys configured. It uses those directly, no reconnecting.
-- **Proactive interview** — asks only what it couldn't find in your files. One question at a time, in plain language.
+Just drop what you have. The agent reads everything, asks only what's missing, and guides you through the rest.
+
+- **Drop your documents and files** into `_brain/inbox/` — SOPs, brand guides, price tables, contracts, code, configs. Or point it at existing folders. Reads everything, extracts what matters, archives the originals. Large codebases processed in stages.
+- **Zero-friction connections** — your `.env` already has Stripe, Supabase, and other keys. Used directly, no reconnecting.
+- **Asks only what's missing** — *"Your price table has no rate limits — what are they?"* One question at a time.
 - **Suggests use cases** — based on what it found in your actual project, not generic templates.
 - **Writes missing documentation** — *"I didn't find any SOPs — want me to document your onboarding process?"*
 - **Builds a live dashboard** — your north star metrics, auto-refreshing in the browser.
@@ -88,7 +75,7 @@ After that, **the brain runs itself.**
 
 ## For small teams
 
-The brain lives as files in your project. Commit `_brain/` to your git repository and every team member works from the same source of truth. Company knowledge, **version-controlled**.
+Commit `_brain/` to your git repository. Every team member works from the same source of truth. Company knowledge, **version-controlled**.
 
 ---
 
