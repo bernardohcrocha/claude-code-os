@@ -21,7 +21,7 @@ Claude Code already has the execution layer — it can run code, call APIs, writ
 
 **Claude Code OS is that layer.**
 
-**No extra subscriptions.** Replaces Trello for task tracking, Notion for documentation, and a lightweight CRM for customer management — all in **static files** your AI reads, updates, and acts on **automatically**, **backed up to git** on every update.
+**No extra subscriptions.** Can replace Trello for task tracking, Notion for documentation, and a lightweight CRM for customer management — all in **static files** your AI reads, updates, and acts on **automatically**, **backed up to git** on every update.
 
 **No workflow changes.** It reads how you already work, learns your processes, and organizes around them. You don't adapt to it — **it adapts to you.**
 
