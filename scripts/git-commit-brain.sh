@@ -1,32 +1,32 @@
 #!/usr/bin/env bash
-# Claude Code OS — Auto Git Backup
-# Run after any _brain/ update.
-# Usage: bash scripts/git-commit-brain.sh "optional message"
+# Claude Code OS — Auto Git Backup for Brain
+# Commits and pushes all changes in _brain/ to its private remote.
+# Usage: bash _brain/scripts/git-commit-brain.sh "optional message"
 
 set -e
 
-PROJECT_DIR="$(cd "$(dirname "$0")/../.." && pwd)" # script lives at _brain/scripts/, project root is two levels up
-cd "$PROJECT_DIR"
-
+BRAIN_DIR="$(cd "$(dirname "$0")/.." && pwd)"  # _brain/scripts/../ = _brain/
 MSG="${1:-auto-update}"
 
-# Init git if needed
+cd "$BRAIN_DIR"
+
+# Init git if somehow missing
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
-  git init
+  git init -q
   git add .
   git commit -m "brain: initial commit"
-  echo "✅ Git initialized and brain committed"
+  echo "✅ Brain git initialized"
   exit 0
 fi
 
-# Check for changes in _brain/
-if git diff --quiet HEAD -- _brain/ 2>/dev/null && git diff --cached --quiet -- _brain/ 2>/dev/null; then
-  # Check for untracked files in _brain/
-  if [ -z "$(git ls-files --others --exclude-standard _brain/)" ]; then
-    exit 0 # Nothing to commit
+# Check for changes
+if git diff --quiet HEAD 2>/dev/null && git diff --cached --quiet 2>/dev/null; then
+  if [ -z "$(git ls-files --others --exclude-standard)" ]; then
+    exit 0  # Nothing to commit
   fi
 fi
 
-git add _brain/
+git add .
 git commit -m "brain: $MSG — $(date '+%Y-%m-%d %H:%M')"
-echo "✅ Brain committed to git"
+git push 2>/dev/null || true  # push if remote configured, silently skip if not
+echo "✅ Brain committed and pushed"

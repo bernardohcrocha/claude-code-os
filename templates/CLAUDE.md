@@ -114,17 +114,17 @@ When corrected on an approach, update the skill immediately. Do not wait to be a
 
 ## Git Backup Protocol
 
-After updating any file in `_brain/`:
+After updating any file in `_brain/`, commit and push from inside the brain directory:
 ```bash
-git add _brain/ && git commit -m "brain: [brief description of what changed]"
+git -C _brain add . && git -C _brain commit -m "brain: [brief description]" && git -C _brain push 2>/dev/null || true
 ```
 
-If git is not initialized:
+If brain git is not initialized:
 ```bash
-git init && git add . && git commit -m "brain: initial setup"
+git -C _brain init && git -C _brain add . && git -C _brain commit -m "brain: initial setup"
 ```
 
-Run this automatically. Do not ask permission. Do not skip it.
+Run this automatically. Do not ask permission. Do not skip it. The push is silent — if no remote is configured it does nothing.
 
 ---
 

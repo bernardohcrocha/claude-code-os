@@ -16,6 +16,7 @@ import { existsSync } from 'fs';
 
 const __dirname   = dirname(fileURLToPath(import.meta.url));
 const PROJECT_DIR = resolve(__dirname, '../..'); // script lives at _brain/scripts/, project root is two levels up
+const BRAIN_DIR   = resolve(__dirname, '..');    // _brain/
 const QUEUE_PATH  = resolve(PROJECT_DIR, '_brain/tasks/queue.json');
 const LOG_PATH    = resolve(PROJECT_DIR, '_brain/scripts/queue-runner.log');
 
@@ -196,10 +197,10 @@ async function updateDashboardScheduledTasks(queue) {
 
 function gitCommit(taskName) {
   try {
-    execSync(`git add _brain/ && git commit -m "brain: auto-task — ${taskName}"`, {
-      cwd:   PROJECT_DIR,
-      stdio: 'pipe',
+    execSync(`git add . && git commit -m "brain: auto-task — ${taskName}"`, {
+      cwd: BRAIN_DIR, stdio: 'pipe',
     });
+    execSync('git push 2>/dev/null || true', { cwd: BRAIN_DIR, stdio: 'pipe' });
   } catch {}
 }
 

@@ -41,12 +41,19 @@ echo "  ✓ Node.js $(node --version)"
 echo "  ✓ Git $(git --version | awk '{print $3}')"
 echo ""
 
-# ── Git init ──────────────────────────────────────────────────────────────────
+# ── Project git init (used for idle detection only) ───────────────────────────
 
 if ! git rev-parse --git-dir &>/dev/null; then
-  echo "  → Initializing git repository..."
+  echo "  → Initializing project git..."
   git init -q
   git commit --allow-empty -m "initial commit" -q
+fi
+
+# Brain has its own git — exclude it from project git
+if [ -f ".gitignore" ]; then
+  grep -qxF "_brain/" .gitignore || echo "_brain/" >> .gitignore
+else
+  echo "_brain/" > .gitignore
 fi
 
 # ── Create _brain/ structure ──────────────────────────────────────────────────
@@ -95,11 +102,36 @@ fi
 echo "  → Installing scheduler..."
 bash _brain/scripts/setup-scheduler.sh 2>/dev/null || true
 
-# ── Initial git commit ────────────────────────────────────────────────────────
+# ── Brain git + cloud backup ──────────────────────────────────────────────────
 
-echo "  → Committing brain to git..."
-git add _brain/ CLAUDE.md 2>/dev/null || true
-git commit -m "brain: claude-code-os initial setup" -q 2>/dev/null || true
+echo "  → Initializing brain repository..."
+git -C _brain init -q
+git -C _brain add .
+git -C _brain commit -m "brain: claude-code-os initial setup" -q
+
+BRAIN_REPO_NAME="$(basename "$PROJECT_DIR")-brain"
+if command -v gh &>/dev/null && gh auth status &>/dev/null 2>&1; then
+  echo "  → Creating private brain repository on GitHub..."
+  if gh repo create "$BRAIN_REPO_NAME" --private --source=_brain --push -q 2>/dev/null; then
+    GH_USER=$(gh api user --jq .login 2>/dev/null || echo "your-account")
+    echo "  ✓ Brain backup active: github.com/$GH_USER/$BRAIN_REPO_NAME (private)"
+  else
+    echo "  ℹ Could not create brain repo — may already exist. Skipping."
+  fi
+else
+  echo ""
+  echo "  ──────────────────────────────────────"
+  echo "  Cloud backup: install GitHub CLI to enable auto-push"
+  echo "  → brew install gh && gh auth login"
+  echo "  → cd _brain && gh repo create $BRAIN_REPO_NAME --private --source=. --push"
+  echo "  ──────────────────────────────────────"
+fi
+
+# ── Commit project files ───────────────────────────────────────────────────────
+
+echo "  → Committing project files..."
+git add .gitignore CLAUDE.md 2>/dev/null || true
+git commit -m "add: claude-code-os setup" -q 2>/dev/null || true
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 
