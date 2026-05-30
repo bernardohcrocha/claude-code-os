@@ -17,13 +17,13 @@ Self-improving · No new tools · No remote server · No lock-in
 
 ## Why Claude Code OS?
 
-After testing OpenClaw, Hermes Agent, and Agent Zero — all solid, all worth exploring — I kept hitting the same wall. They're built for engineers who want to configure agent infrastructure. You define the use cases, spin up the server, keep your data synced between your machine and a VPS. Powerful, but overkill for someone running a company solo.
+After testing OpenClaw, Hermes Agent, and Agent Zero — all solid, all worth exploring — I kept hitting the same wall. Powerful tools, but they require setting up infrastructure, defining use cases from scratch, and keeping data synced to a VPS. Overkill for someone running a company solo.
 
-I needed something that runs inside Claude Code (already open every day), knows my business without starting from scratch each session, and gets smarter naturally — **without extra tools, remote servers, or setup tax. Everything runs locally on your machine, and I can port it to any project at any time, keeping full control.**
+I needed something that runs **locally** — with direct access to all my API keys and the latest version of my code, always in sync, no uploading or downloading back and forth, and **no security concerns about sharing environment variables.**
 
-The real goal was to get **as close as possible to having a real super employee** — someone who knows everything about the company, learns from every interaction, and is always available. Pairing it with speech-to-text like [handy.computer](https://handy.computer) or WhisperFlow makes that real: give orders while commuting, ask questions between meetings, let it run and learn on autopilot.
+The goal: get **as close as possible to having a real super employee.** Pair it with **speech-to-text** to give voice orders while commuting, ask questions between meetings, and let it run and learn on autopilot. ([handy.computer](https://handy.computer) and [Wispr Flow](https://wisprflow.ai/) work great for this.)
 
-**The result:** minimum input, maximum output.
+**Minimum input, maximum output.**
 
 ### Core Philosophy
 
