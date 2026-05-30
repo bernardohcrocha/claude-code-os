@@ -30,7 +30,7 @@ The real goal was to get as close as possible to having a real super employee �
 | **Reads first, asks second** | Drops into your project and reads your code, docs, and `.env` files. No explaining your stack. No reconnecting your tools. |
 | **Asks the right questions** | Identifies what's missing and asks only that. One question at a time. It guides you — you don't chase it. |
 | **Works with any starting point** | No SOPs? No documentation? Big mess of files? No problem. It interviews you and builds the structure for you. |
-| **Improves itself automatically** | Every instruction creates or updates a skill on the fly. The more you use it, the smarter it gets — without any extra steps. |
+| **Improves itself automatically** | Every instruction updates **persistent memory** and creates or updates **skills** on the fly. The more you use it, the smarter it gets — no extra steps required. |
 
 ---
 
@@ -48,20 +48,23 @@ The agent fetches the framework and starts the setup interview automatically.
 
 ## Example Use Cases
 
-**Ask questions you can't answer with a quick dashboard check**
-> *"Which customers are showing early signs of churn based on their usage pattern this month?"*  
-> *"Compare my CAC this quarter vs last — is cold email converting better than Google Ads?"*  
-> *"Analyze today's signups and tell me which ones are worth prioritizing for outreach and why"*  
-> *"Draft a win-back sequence for customers who downgraded in the last 60 days, using their specific plan history"*
+**Ask questions you CAN'T answer with a quick dashboard check**
+
+- *"Which customers are showing early signs of churn based on their usage pattern this month?"*
+- *"Compare my CAC this quarter vs last — is cold email converting better than Google Ads?"*
+- *"Analyze today's signups and tell me which ones are worth prioritizing for outreach and why"*
+- *"Draft a win-back sequence for customers who downgraded in the last 60 days, using their specific plan history"*
 
 **Give operational orders**
-> *"Follow up with users who haven't made a second query in 7 days"*  
-> *"Every Monday, send me a report of new signups and at-risk accounts"*  
-> *"Set up a daily digest of support patterns and flag anything recurring"*
+
+- *"Follow up with users who haven't made a second query in 7 days"*
+- *"Every Monday, send me a report of new signups and at-risk accounts"*
+- *"Set up a daily digest of support patterns and flag anything recurring"*
 
 **Teach it your way of working**
-> *"From now on, always mention LGPD when writing to accounting firms"*  
-> *"Never group emails by domain — send one per person"*
+
+- *"From now on, always mention LGPD when writing to accounting firms"*
+- *"Never group emails by domain — send one per person"*
 
 These become **permanent skills** — created and updated automatically, applied in every future session without reminders.
 
@@ -122,5 +125,8 @@ _brain/
 
 ---
 
-*Claude Code is a product of Anthropic. Claude Code OS is an independent open-source project, not affiliated with or endorsed by Anthropic.*  
+---
+
+*Claude Code is a product of Anthropic. Claude Code OS is an independent open-source project, not affiliated with or endorsed by Anthropic.*
+
 MIT License · 2026
