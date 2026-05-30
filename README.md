@@ -4,9 +4,9 @@
 
 **Claude Code OS**
 
-# The brain your company already needed.
+# The Operational Copilot for Solo Founders.
 
-Self-improving · Fully local · No new tools · No lock-in
+Fully local · Done-for-you SOPs · Self-evolving · Auto cloud backup · No lock-in
 
 [![MIT License](https://img.shields.io/badge/License-MIT-da7756?style=flat-square)](LICENSE)
 [![Built for Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-da7756?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
