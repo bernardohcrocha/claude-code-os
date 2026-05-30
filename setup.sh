@@ -93,7 +93,7 @@ fi
 # ── Scheduler ─────────────────────────────────────────────────────────────────
 
 echo "  → Installing scheduler..."
-bash _brain/scripts/setup-scheduler.sh 2>/dev/null
+bash _brain/scripts/setup-scheduler.sh 2>/dev/null || true
 
 # ── Initial git commit ────────────────────────────────────────────────────────
 
@@ -117,6 +117,6 @@ echo ""
 echo "  ──────────────────────────────────────"
 echo "  Scheduler:  every 15 min (catches up on wake)"
 echo "  Git backup: auto-commits brain on every update"
-echo "  Inbox:      drop any file in _brain/inbox/ anytime"
+echo "  Dashboard:  open _brain/dashboard.html in your browser"
 echo "  ──────────────────────────────────────"
 echo ""

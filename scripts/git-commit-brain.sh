@@ -5,7 +5,7 @@
 
 set -e
 
-PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PROJECT_DIR="$(cd "$(dirname "$0")/../.." && pwd)" # script lives at _brain/scripts/, project root is two levels up
 cd "$PROJECT_DIR"
 
 MSG="${1:-auto-update}"

@@ -7,8 +7,8 @@
 
 set -e
 
-PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-RUNNER="$PROJECT_DIR/scripts/queue-runner.mjs"
+PROJECT_DIR="$(cd "$(dirname "$0")/../.." && pwd)" # script lives at _brain/scripts/, project root is two levels up
+RUNNER="$PROJECT_DIR/_brain/scripts/queue-runner.mjs"
 LOG_DIR="$PROJECT_DIR/_brain/scripts"
 LOG_FILE="$LOG_DIR/queue-runner.log"
 

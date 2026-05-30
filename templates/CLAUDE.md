@@ -1,7 +1,7 @@
 # Company Brain
 
 > **Session Protocol — run in this order at the start of every conversation:**
-> 1. Check `_brain/tasks/queue.json` for pending tasks where `status == "pending"` and `next_run` is in the past. Execute each one immediately — including daily brain sync if it hasn't run today.
+> 1. Check `_brain/inbox/` for any files — process each one immediately, then move to `_brain/archive/YYYY-MM-DD/`. Check `_brain/tasks/queue.json` for pending tasks where `status == "pending"` and `next_run` is in the past — execute each immediately, including daily brain sync if it hasn't run today.
 > 2. Run a quick `git diff HEAD~1 --name-only` — if files changed since last session that haven't been indexed yet, read and update relevant brain sections.
 > 3. Read `_brain/index.html` — the navigation map. Load only the sub-files relevant to the current task.
 > 4. For recurring operational tasks, load the relevant skill from `_brain/skills/`.

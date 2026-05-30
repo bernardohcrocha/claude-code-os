@@ -15,7 +15,7 @@ import { spawnSync, execSync } from 'child_process';
 import { existsSync } from 'fs';
 
 const __dirname   = dirname(fileURLToPath(import.meta.url));
-const PROJECT_DIR = resolve(__dirname, '..');
+const PROJECT_DIR = resolve(__dirname, '../..'); // script lives at _brain/scripts/, project root is two levels up
 const QUEUE_PATH  = resolve(PROJECT_DIR, '_brain/tasks/queue.json');
 const LOG_PATH    = resolve(PROJECT_DIR, '_brain/scripts/queue-runner.log');
 
