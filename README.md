@@ -6,7 +6,7 @@
 
 # The Operational Copilot for Solo Founders.
 
-Fully local · No extra tools · No workflow changes · Self-evolving · Auto git backup
+Local-first · No extra tools · No workflow changes · Self-evolving · Auto git backup
 
 [![MIT License](https://img.shields.io/badge/License-MIT-da7756?style=flat-square)](LICENSE)
 [![Built for Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-da7756?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
@@ -23,7 +23,7 @@ You're running a real company solo. You already have Stripe, Supabase, code, doc
 
 **No workflow changes.** It reads how you already work, learns your processes, and organizes around them. You don't adapt to it — **it adapts to you.**
 
-**Fully local.** Your API keys stay on your machine. No infrastructure to set up. No remote server. No data leaving your environment. Just open your project, paste one command, and let it ask you what it needs.
+**Local-first.** Your API keys stay on your machine. No infrastructure to set up. No remote server. No data leaving your environment. Just open your project, paste one command, and let it ask you what it needs.
 
 Pair it with **speech-to-text** to give voice orders as you would to a real **super employee** — ask questions, delegate tasks, and let it run on autopilot ([handy.computer](https://handy.computer) and [Wispr Flow](https://wisprflow.ai/) work great for this).
 
@@ -148,7 +148,7 @@ _brain/
 | **Asks the right questions** | Identifies what's missing and asks only that. One question at a time. It guides you. You don't chase it. |
 | **Works with any starting point** | No SOPs? No documentation? Big mess of files? No problem. It interviews you and builds the structure for you. |
 | **Improves itself automatically** | Every instruction updates persistent memory and creates or updates skills on the fly. The more you use it, the smarter it gets. |
-| **Fully local** | No remote server, no database. Lives in your project: portable, versionable, fully owned. Port to any tool at any time. |
+| **Local-first** | No remote server, no database. Lives in your project: portable, versionable, fully owned. Port to any tool at any time. |
 | **Builds around you** | Not generic. Every brain, dashboard, and skill is shaped by your specific company, data, and instructions. |
 | **Git as your safety net** | Every brain update is auto-committed. Permanent log. Push to GitHub for a cloud backup that stays in sync. Restore anything, anytime. |
 
