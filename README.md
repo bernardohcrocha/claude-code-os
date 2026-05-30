@@ -19,7 +19,9 @@ You're running a real company solo. You already have Stripe, Supabase, code, doc
 
 **Claude Code OS turns all of that into an operational co-pilot that knows your whole business, executes tasks on command, and proactively suggests what to do next.**
 
-Fully local. Your API keys stay on your machine. No infrastructure to set up. No remote server. No data leaving your environment. Just open your project, paste one command, and let it ask you what it needs.
+**No extra subscriptions.** Replaces Trello for task tracking, Notion for documentation, and a lightweight CRM for customer management — all in **static files** your AI reads, updates, and acts on **automatically**, **backed up to git** on every update.
+
+**Fully local.** Your API keys stay on your machine. No infrastructure to set up. No remote server. No data leaving your environment. Just open your project, paste one command, and let it ask you what it needs.
 
 Pair it with **speech-to-text** to give voice orders as you would to a real **super employee** — ask questions, delegate tasks, and let it run on autopilot ([handy.computer](https://handy.computer) and [Wispr Flow](https://wisprflow.ai/) work great for this).
 
@@ -99,6 +101,14 @@ These become **permanent skills**: created automatically, updated on the fly, ap
 **3. The brain runs itself.** Skills improve automatically. Metrics update daily. Every session picks up where the last one left off.
 
 Not a template you fill in. A system that builds around you.
+
+---
+
+## Every session picks up exactly where the last one left off.
+
+All instructions, protocols, and company knowledge live in `CLAUDE.md` and `_brain/`. Restart your computer, come back after a month, switch machines — Claude reads the files and continues without skipping a beat.
+
+No re-explaining your stack. No onboarding again. **Nothing lost.**
 
 ---
 
