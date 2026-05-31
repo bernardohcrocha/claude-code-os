@@ -13,7 +13,7 @@
       "last_run": null,
       "next_run": null,
       "status": "pending",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "daily-brain-sync",
@@ -27,7 +27,7 @@
       "last_run": null,
       "next_run": null,
       "status": "pending",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "weekly-brain-review",
@@ -42,7 +42,7 @@
       "last_run": null,
       "next_run": null,
       "status": "pending",
-      "enabled": false
+      "enabled": true
     }
   ]
 }

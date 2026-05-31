@@ -224,7 +224,14 @@ async function main() {
 
   for (const task of queue.tasks) {
     if (!task.enabled || task.status === 'running') continue;
-    if (!task.next_run) continue;
+
+    // If enabled but never scheduled, calculate next_run now instead of skipping
+    if (!task.next_run) {
+      task.next_run = getNextRun(task.schedule);
+      changed = true;
+      await log(`${task.name}: no next_run set — scheduled for ${task.next_run}`);
+      continue;
+    }
 
     const nextRun = new Date(task.next_run);
     if (nextRun > now) {
@@ -257,8 +264,10 @@ async function main() {
 
   if (changed) {
     await writeFile(QUEUE_PATH, JSON.stringify(queue, null, 2));
-    await updateDashboardScheduledTasks(queue);
   }
+
+  // Always update dashboard so scheduled tasks section stays current
+  await updateDashboardScheduledTasks(queue);
 
   await log('Queue runner finished');
 }
