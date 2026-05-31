@@ -57,6 +57,8 @@ Scheduled tasks, proactive suggestions, active projects, weekly review: all upda
 
 Want to change anything? Just tell it.
 
+*Every 3 days, when the project is idle, it scans across metrics, customers, and channels and leaves a note with what it noticed. Always suggests. Never acts on its own.*
+
 ---
 
 ## Token-efficient by design.
