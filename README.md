@@ -4,9 +4,9 @@
 
 **Claude Code OS**
 
-# The Operational Copilot for Solo Founders.
+# The Operational Copilot that Self-Updates.
 
-Local-first · No extra tools · No workflow changes · Self-evolving · Auto git backup
+Local-first · No extra tools · No workflow changes · Token-efficient · Auto git backup
 
 [![MIT License](https://img.shields.io/badge/License-MIT-da7756?style=flat-square)](LICENSE)
 [![Built for Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-da7756?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
@@ -15,123 +15,75 @@ Local-first · No extra tools · No workflow changes · Self-evolving · Auto gi
 
 ---
 
-You're running a real company solo. You already have Stripe, Supabase, code, docs, customers — all sitting in your project folder.
+Claude Code executes well. The problem is it has no operational memory.
 
-Claude Code already has the execution layer — it can run code, call APIs, write files, and schedule tasks autonomously. **The missing piece was a persistent operational brain:** something that knows your business, remembers your processes, and gets smarter without you having to repeat yourself.
+Every session starts from zero. Every new feature, every new document, every detail that changed in your project — you have to re-explain it, or dump the entire project as context and pay the token cost. Either way, you're doing work the agent should be doing.
 
-**Claude Code OS is that layer.**
+**Claude Code OS fixes that.** A `_brain/` folder lives inside your project root. It reads from your code, docs, and configs on first run. From then on, it updates itself — every day, automatically, based on what actually changed.
 
-**No extra subscriptions.** Can replace Trello for task tracking, Notion for documentation, and a lightweight CRM for customer management — all in **static files** your AI reads, updates, and acts on **automatically**, **backed up to git** on every update.
+---
 
-**No workflow changes.** It reads how you already work, learns your processes, and organizes around them. You don't adapt to it — **it adapts to you.**
+## It already knows.
 
-**Local-first.** Your API keys stay on your machine. No infrastructure to set up. No remote server. No data leaving your environment.
+You ship a new payment method. It updates the product knowledge, the customer segments it unlocks, and the metrics to start tracking. You never said a word.
 
-One more trick: pair it with **speech-to-text** ([Wispr Flow](https://wisprflow.ai/) or [handy.computer](https://handy.computer)) and it starts feeling like an actual **super employee** you can give orders to from anywhere — desk, commute, or walking between meetings.
+You add brand assets to a folder. Brand guidelines updated automatically.
+
+You come back after a month on a new machine. It reads the files and continues without skipping a beat. No re-explaining your stack. No copy-pasting context. Nothing lost.
+
+---
+
+## It acts — not just remembers.
+
+→ *"Which customers dropped usage 30%+ this month? Cross-check their support history and draft a personalized re-engagement message for each."*
+
+→ *"Every Monday: pull last week's numbers from Stripe, compare against the previous week, flag anomalies, and queue a follow-up for any account that dropped below 10% quota."*
+
+→ *"Find signups from the last 30 days with no activity after signup. Filter out fake-looking domains. Visit each company's website, understand what they do, map it to how similar customers already use the product, and write a personalized email for each — leading with the pain points most relevant to their specific use case."*
+
+Set once. Runs automatically. Already has full context because it lives in the project.
+
+---
+
+## Token-efficient by design.
+
+Every day, `git diff HEAD~1` detects exactly what changed. 1,000 files in the project, 3 changed today — it reads 3. Not a full re-read. Just the delta.
+
+One changed file updates every dimension it touches simultaneously — product knowledge, customer segments, metrics, skills. Cross-dimensional, automatic, lightweight.
+
+---
+
+## Every instruction becomes permanent.
+
+Say it once: *"When flagging fraud, always cross-check disposable email domains, duplicate names, and signup timing."*
+
+It writes `_brain/skills/fraud.md` immediately. Loaded at every future session start. Applied automatically, forever. No reminders. No editing files. No re-explaining.
+
+---
+
+## Pair it with speech-to-text.
+
+Add [Wispr Flow](https://wisprflow.ai/) or [handy.computer](https://handy.computer) and it starts feeling like a real super employee you can give orders to from anywhere — desk, commute, walking between meetings.
+
+*"Check if any Pro accounts are near quota and draft a heads-up for each."* Done. While you're making coffee.
 
 ---
 
 ## One command. It builds itself from there.
 
-Open Claude Code in your **project root folder** (so it has access to all subfolders — development, marketing, docs, everything), then run this in the terminal:
+Open Claude Code in your **project root folder**, then run:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/bernardohcrocha/claude-code-os/main/setup.sh | bash
 ```
 
-Claude picks up immediately — scans your entire project, connects to your existing tools, discovers what's missing, and starts the interview. One question at a time.
-
-No forms. No config files. Just a conversation.
+Claude scans your entire project, connects to your existing tools, and asks only what it can't find. No forms. No config files. Just a conversation.
 
 > **Requires:** git · Node.js 18+
 
-> **Optional:** [GitHub CLI](https://cli.github.com) (`gh`) — if installed and authenticated, setup automatically creates a private brain repository and enables cloud backup with every commit.
+> **Optional:** [GitHub CLI](https://cli.github.com) (`gh`) — if installed and authenticated, setup automatically creates a private brain repository and enables cloud backup with every commit. Format your machine, `git clone` the brain repo, continue exactly where you left off.
 
-> **Scheduler included:** queue runner installs automatically and catches up on tasks even after sleep or restart.
-
-> **Recovery:** switched machines or wiped your computer? `git clone [brain-repo] _brain/` — open Claude Code and continue exactly where you left off. No setup, no interviews, no re-explaining.
-
----
-
-## Ask. Give. Teach.
-
-**Ask** — questions no dashboard can answer
-
-*"Which customers dropped usage by 30%+ this month? What's the likely reason?"*
-
-*"Any Pro customers with recurring support issues? Should I escalate or issue a credit?"*
-
-*"Of signups in the last 30 days with zero API calls — which ones look like real companies worth following up?"*
-
----
-
-**Give** — operational tasks, run on your schedule
-
-*"Find customers with 6+ months of tenure. Draft a personalized message for each asking about their integration needs."*
-
-*"Every Monday at 9am: pull last week's numbers, flag anomalies, send me a summary with a suggested action for each segment."*
-
-*"Whenever a Pro account is below 10% quota by the 20th, queue a check-in message."*
-
-Set once. Runs automatically.
-
----
-
-**Teach** — how you work, so it never forgets
-
-*"When flagging fraud: always cross-check disposable email domains, duplicate names, and signup timing."*
-
-*"When a customer upgrades: add them to a 30-day sequence — message at day 3, follow-up at day 14."*
-
-*"Churn risk reports: under 50 employees gets a personal email, over 50 gets flagged for me to handle directly."*
-
-These become **permanent skills** — created automatically, applied in every future session. No reminders. No re-explaining.
-
----
-
-## What you get
-
-| | |
-|---|---|
-| **Your existing tools, already connected** | Reads your codebase, docs, and `.env` files. Your Stripe key is already there. Your product logic is in the code. Zero extra setup. |
-| **Self-improving skills** | Every instruction becomes a permanent rule. Created and updated on the fly, applied forever. One correction, done. |
-| **Live business metrics** | Connects to Stripe, Supabase, or any database already in your project. Builds a live dashboard — updated whenever your data changes or a scheduled task runs. |
-| **Proactive suggestions** | Every 3 days, scans your customers, channels, and metrics — and leaves you a note with what it noticed. Never interrupts active work. Always asks before acting. |
-| **Cloud backup** | Brain lives in its own private git repository, separate from your project. Every update commits and pushes automatically. Format your computer, clone the brain repo, continue where you left off. |
-| **Process documentation** | No SOPs yet? It interviews you and writes them. Then keeps them updated as things change. |
-| **Plain language operations** | Send emails, query databases, generate reports, schedule tasks. No code required. |
-
----
-
-## How it works
-
-**1. Opens your project and reads everything.** Code, docs, `.env` files, configs — the entire project root, automatically. Large codebases are processed in batches to make sure nothing is left behind.
-
-**2. One conversation.** It asks only what it can't find. No forms, no checklists. One question at a time.
-
-**3. Stays in sync automatically.** Every day, a `git diff` detects exactly what changed — new files, edited docs, code updates, anything added anywhere in your project folder. The brain updates accordingly. Missed a run because the computer was off? **Automatic recovery** runs it as soon as you're back.
-
-Not a template you fill in. A system that builds around you.
-
----
-
-## Every session picks up exactly where the last one left off.
-
-All instructions, protocols, and company knowledge live in `CLAUDE.md` and `_brain/`. Restart your computer, come back after a month, switch machines — Claude reads the files and continues without skipping a beat.
-
-No re-explaining your stack. No copy-pasting context. No sending files back and forth. **Nothing lost.**
-
----
-
-## Your live command center
-
-Metrics, active projects, customers to watch, tasks in progress, proactive suggestions — everything in one auto-refreshing page.
-
-No cookie-cutter template. No fixed layout. The dashboard is built from your actual data and evolves as your business does — different sections, different metrics, different priorities. What's most relevant right now is what it shows.
-
-Want to change anything? Give it a voice instruction. Done.
-
-**Self-updating. Self-improving. Self-evolving.**
+> **Scheduler included:** installs automatically (launchd on macOS, systemd on Linux). Catches up on missed tasks after sleep or restart.
 
 ---
 
@@ -144,11 +96,17 @@ _brain/
 ├── dashboard.html    ← live command center, auto-refreshes in browser
 ├── core/             ← product, brand, ICP
 ├── operations/       ← metrics + customers, auto-updated daily
-├── skills/           ← self-improving rules, created and updated automatically
+├── skills/           ← permanent rules, created and updated automatically
 └── tasks/            ← scheduled tasks queue, managed automatically
 ```
 
 → [How the git architecture works](ARCHITECTURE.md)
+
+---
+
+100% local. 100% free. 100% open source.
+
+Fork it. Adjust it. Make it yours.
 
 ---
 
