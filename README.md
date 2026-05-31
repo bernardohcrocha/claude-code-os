@@ -15,7 +15,7 @@ Self-evolving · No extra tools · No workflow changes · Token-efficient · Aut
 
 ---
 
-Claude Code executes well. The problem is it has no **operational memory**.
+Claude Code executes well. The problem is it has no **persistent operational memory**.
 
 Every session starts from zero. Every new feature, every new document, every detail that changed in your project: you had to re-explain it, or dump the entire project as context and pay the token cost. Either way, you're doing work the agent should be doing.
 
