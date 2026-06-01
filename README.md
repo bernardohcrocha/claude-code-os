@@ -6,7 +6,7 @@
 
 # Self-updating agentic memory for Claude Code.
 
-Turn Claude Code into an agent that remembers, acts, and updates itself as your project changes.
+Turn Claude Code into an agent that remembers and acts seamlessly as your project changes.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-da7756?style=flat-square)](LICENSE)
 [![Built for Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-da7756?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
