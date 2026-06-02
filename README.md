@@ -1,12 +1,12 @@
 <div align="center">
 
-![Persistia](Persistia-md.png)
+![Persistia](Persistia.png)
 
 **Persistia**
 
 # Self-updating persistent memory for Claude Code.
 
-Turn Claude Code into an agent that remembers and acts seamlessly as your project changes.
+Turn Claude Code into an agent that acts and works seamlessly even as your project evolves.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-da7756?style=flat-square)](LICENSE)
 [![Built for Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-da7756?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
@@ -17,7 +17,7 @@ Turn Claude Code into an agent that remembers and acts seamlessly as your projec
 
 Claude Code has no operational memory. Every session starts from zero — you re-explain your stack, paste context, repeat yourself.
 
-**Persistia fixes that.** A `_brain/` folder lives in your project root and acts as persistent memory. It reads your project once, then self-updates daily from `git diff` — only what changed, nothing more.
+**Persistia fixes that.** A `_brain/` folder lives in your project root, storing everything: project knowledge, skills, scheduled tasks, and every instruction you give it. It reads your project once, then self-updates daily from `git diff`. Only what changed, nothing more.
 
 ---
 
