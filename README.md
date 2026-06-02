@@ -59,7 +59,7 @@ Unlike Hermes Agent, Agent Zero, or OpenClaw — context updates itself. No manu
 
 A dashboard shows numbers. This answers questions and executes orders — cross-tools.
 
-**Ask** — revenue, churn, at-risk accounts, support patterns. Answered across code, metrics, docs, and tools in one response.  
+**Ask** — revenue, churn, at-risk accounts, support patterns — across all your tools at once.  
 **Give orders** — outreach, reports, follow-ups. Executed using credentials you already have.  
 **Schedule** — any task, in plain language, runs automatically with full context.
 
@@ -67,7 +67,7 @@ A dashboard shows numbers. This answers questions and executes orders — cross-
 
 → *"Every Monday: pull last week's numbers from Stripe, flag anomalies, and queue a follow-up for any account that dropped below quota."*
 
-→ *"Find signups from the last 30 days with no activity. Visit each company's website and write a personalized email — leading with the most relevant pain points."*
+→ *"Find signups from the last 30 days with no activity. Visit each company's website and write a personalized email leading with the most relevant pain points."*
 
 ---
 
