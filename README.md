@@ -45,6 +45,7 @@ Claude scans your project and asks only what it can't find. No forms. No config 
 - **Permanent skills** — say it once → written to `_brain/skills/`, loaded at every future session
 - **Autonomous tasks** — schedule any task in plain language, runs automatically with full context
 - **Live dashboard** — open `_brain/dashboard.html`, auto-refreshes every 5 min
+- **Shareable memory** — private git repo, portable across machines, shareable with your team
 
 Unlike Hermes Agent, Agent Zero, or OpenClaw — context updates itself. No manual maintenance required.
 
