@@ -4,7 +4,7 @@
 
 **Persistia**
 
-# Self-updating agentic memory for Claude Code.
+# Self-updating memory that lives inside your project.
 
 Turn Claude Code into an agent that remembers and acts seamlessly as your project changes.
 
