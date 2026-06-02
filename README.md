@@ -41,7 +41,7 @@ Claude scans your project and asks only what it can't find. No forms. No config 
 
 ## How it works
 
-- **Self-updating memory** — runs `git diff HEAD~1` daily. 1,000 files, 3 changed: it reads 3. Token-efficient by design.
+- **Self-updating memory** — runs `git diff` daily. 1,000 files, 3 changed: it reads 3. Token-efficient by design.
 - **Permanent skills** — say it once → written to `_brain/skills/`, loaded at every future session
 - **Autonomous tasks** — schedule any task in plain language, runs automatically with full context
 - **Proactive scan** — every 3 days when idle, it scans metrics, customers, and channels and flags what it notices. Always suggests, never acts unilaterally.
