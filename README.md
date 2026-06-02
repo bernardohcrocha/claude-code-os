@@ -21,6 +21,8 @@ Claude Code has no operational memory. Every session starts from zero. You re-ex
 
 **The result:** an agent that always knows your full project and stays up-to-date automatically — even as you ship new features, add docs, or change your stack.
 
+**Minimum input. Maximum output.**
+
 ---
 
 ## Install
