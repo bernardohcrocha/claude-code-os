@@ -6,7 +6,7 @@
 
 # Self-updating persistent memory for Claude Code.
 
-Turn Claude Code into an agent that acts and works seamlessly even as your project evolves.
+Give Claude Code the persistent memory it was missing and turn it into your operational co-pilot.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-da7756?style=flat-square)](LICENSE)
 [![Built for Claude Code](https://img.shields.io/badge/Built%20for-Claude%20Code-da7756?style=flat-square&logo=anthropic&logoColor=white)](https://claude.ai/code)
@@ -15,9 +15,11 @@ Turn Claude Code into an agent that acts and works seamlessly even as your proje
 
 ---
 
-Claude Code has no operational memory. Every session starts from zero — you re-explain your stack, paste context, repeat yourself.
+Claude Code has no operational memory. Every session starts from zero. You re-explain your stack, paste context, repeat yourself.
 
-**Persistia fixes that.** A `_brain/` folder lives in your project root, storing everything: project knowledge, skills, scheduled tasks, and every instruction you give it. It reads your project once, then self-updates daily from `git diff`. Only what changed, nothing more.
+**Persistia fixes that.** On first run, it scans your entire project — code, architecture, docs, and configs. Reads your `.env` files and uses credentials you already have. Stores everything in small, focused files with a navigation index. Then monitors changes via `git diff`: 1,000 files, 3 changed, it reads 3.
+
+**The result:** an agent that always knows your full project and stays up-to-date automatically — even as you ship new features, add docs, or change your stack.
 
 ---
 
@@ -41,7 +43,8 @@ Claude scans your project and asks only what it can't find. No forms. No config 
 
 ## How it works
 
-- **Self-updating memory** — runs `git diff` daily. 1,000 files, 3 changed: it reads 3. Token-efficient by design.
+- **Initial indexing** — on first run, scans your entire project: code, docs, configs, and environment files. Asks only what it can't find on its own. Uses credentials you already have — no manual reconnection.
+- **Self-updating memory** — runs `git diff` daily. Only what changed gets read. Token-efficient by design.
 - **Permanent skills** — say it once → written to `_brain/skills/`, loaded at every future session
 - **Autonomous tasks** — schedule any task in plain language, runs automatically with full context
 - **Proactive scan** — every 3 days when idle, it scans metrics, customers, and channels and flags what it notices. Always suggests, never acts unilaterally.
@@ -52,7 +55,13 @@ Unlike Hermes Agent, Agent Zero, or OpenClaw — context updates itself. No manu
 
 ---
 
-## Tasks you can schedule
+## Make Claude Code your operational co-pilot
+
+A dashboard shows numbers. This answers questions and executes orders — cross-tools.
+
+**Ask** — revenue, churn, at-risk accounts, support patterns. Answered across code, metrics, docs, and tools in one response.  
+**Give orders** — outreach, reports, follow-ups. Executed using credentials you already have.  
+**Schedule** — any task, in plain language, runs automatically with full context.
 
 → *"Which customers dropped usage 30%+ this month? Cross-check their support history and draft a personalized re-engagement message for each."*
 
