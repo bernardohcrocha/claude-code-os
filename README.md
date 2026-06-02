@@ -41,11 +41,12 @@ Claude scans your project and asks only what it can't find. No forms. No config 
 
 ## How it works
 
-- **Self-updating memory** — runs `git diff HEAD~1` daily. 1,000 files in the project, 3 changed today: it reads 3
+- **Self-updating memory** — runs `git diff HEAD~1` daily. 1,000 files, 3 changed: it reads 3. Token-efficient by design.
 - **Permanent skills** — say it once → written to `_brain/skills/`, loaded at every future session
 - **Autonomous tasks** — schedule any task in plain language, runs automatically with full context
+- **Proactive scan** — every 3 days when idle, it scans metrics, customers, and channels and flags what it notices. Always suggests, never acts unilaterally.
 - **Live dashboard** — open `_brain/dashboard.html`, auto-refreshes every 5 min
-- **Shareable memory** — private git repo, portable across machines, shareable with your team
+- **Shareable memory** — its own private git repo. Format your machine, `git clone` the brain repo, continue exactly where you left off. Shareable with your team.
 
 Unlike Hermes Agent, Agent Zero, or OpenClaw — context updates itself. No manual maintenance required.
 
