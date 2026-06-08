@@ -32,6 +32,8 @@ if [ "$NODE_VER" -lt 18 ]; then
   exit 1
 fi
 
+NODE_BIN="$(command -v node)"
+
 if ! command -v git &>/dev/null; then
   echo "  ✗ Git not found. Install from https://git-scm.com"
   exit 1
@@ -102,12 +104,14 @@ fi
 # ── Scheduler ─────────────────────────────────────────────────────────────────
 
 echo "  → Installing scheduler..."
-bash _brain/scripts/setup-scheduler.sh 2>/dev/null || true
+bash _brain/scripts/setup-scheduler.sh "$NODE_BIN" 2>/dev/null || true
 
 # ── Brain git + cloud backup ──────────────────────────────────────────────────
 
 echo "  → Initializing brain repository..."
 git -C _brain init -q
+git -C _brain config user.email "brain@persistia.local"
+git -C _brain config user.name "Persistia"
 git -C _brain add .
 git -C _brain -c user.email="setup@persistia.local" -c user.name="Persistia Setup" \
   commit -m "brain: persistia-for-claude-code initial setup" -q

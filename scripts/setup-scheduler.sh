@@ -7,6 +7,7 @@
 
 set -e
 
+NODE_BIN="${1:-$(command -v node 2>/dev/null || echo 'node')}"
 PROJECT_DIR="$(cd "$(dirname "$0")/../.." && pwd)" # script lives at _brain/scripts/, project root is two levels up
 RUNNER="$PROJECT_DIR/_brain/scripts/queue-runner.mjs"
 LOG_DIR="$PROJECT_DIR/_brain/scripts"
@@ -39,8 +40,7 @@ case "$OS" in
   <string>$LABEL</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/bin/env</string>
-    <string>node</string>
+    <string>$NODE_BIN</string>
     <string>$RUNNER</string>
   </array>
   <key>WorkingDirectory</key>
@@ -81,7 +81,7 @@ Description=Persistia Queue Runner — $(basename "$PROJECT_DIR")
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/env node $RUNNER
+ExecStart=$NODE_BIN $RUNNER
 WorkingDirectory=$PROJECT_DIR
 StandardOutput=append:$LOG_FILE
 StandardError=append:$LOG_FILE
