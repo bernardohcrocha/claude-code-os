@@ -43,6 +43,18 @@ Claude scans your project and asks only what it can't find. No forms. No config 
 
 ---
 
+## How Persistia is different
+
+Most memory systems dump everything into context every session — slow, expensive, and prone to hallucination as the project grows.
+
+Persistia is built around three principles:
+
+- **Modular memory, loaded on demand** — the brain is split into focused files by domain (product, brand, metrics, customers). Claude reads the index first and loads only what the current task needs. Nothing irrelevant enters the context.
+- **Token-efficient by design** — updates run via `git diff`, not full project scans. 1,000 files, 3 changed: Claude reads 3. Context stays lean regardless of project size.
+- **Self-updating, zero maintenance** — brain files are written and committed automatically. Skills are captured as soon as you give a recurring instruction. You never manually update memory.
+
+---
+
 ## How it works
 
 - **Initial indexing** — on first run, scans your entire project: code, docs, configs, and environment files. Asks only what it can't find on its own. Uses credentials you already have — no manual reconnection.
